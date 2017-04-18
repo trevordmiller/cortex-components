@@ -1,0 +1,72 @@
+{
+  "name": "cortex-components",
+  "version": "0.1.0",
+  "description": "The shared components for Cortex clients",
+  "repository": "trevordmiller/cortex-components",
+  "license": "MIT",
+  "author": "Trevor D. Miller (https://trevordmiller.com)",
+  "main": "lib/index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE.md",
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel src -d lib",
+    "dev": "yarn link && yarn build -- -w",
+    "test": "jest src --watch",
+    "lint": "eslint src",
+    "verify": "CI=true yarn build && yarn test && yarn lint",
+    "prerelease": "yarn verify",
+    "release": "yarn unlink && np",
+    "prepublish": "yarn build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.3.3",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "jest": "^19.0.2",
+    "np": "^2.13.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-apollo": "^1.0.1",
+    "react-native-web": "^0.0.81"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "react/display-name": [
+        "off"
+      ]
+    }
+  }
+}
