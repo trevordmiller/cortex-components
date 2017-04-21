@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 const fs = require('fs')
 const {buildClientSchema, introspectionQuery, printSchema} = require('graphql/utilities')
-const {apiUrl} = require('../urls')
+const {apiUrl} = require('../src/utils/urls')
 
 fetch(apiUrl, {
   method: 'POST',

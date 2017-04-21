@@ -1,5 +1,5 @@
 import {Environment, Network, RecordSource, Store} from 'relay-runtime'
-import {apiUrl} from '../../urls'
+import {apiUrl} from './urls'
 
 const fetchQuery = (operation, variables) => 
   fetch(apiUrl, {
