@@ -1,3 +1,3 @@
-import RootSource from './components/Root'
+import BrowseQuestionsSource from './components/BrowseQuestions'
 
-export const Root = RootSource
+export const BrowseQuestions = BrowseQuestionsSource

@@ -14,12 +14,12 @@
   ],
   "scripts": {
     "build": "babel src -d lib",
-    "dev": "yarn link && yarn build -- -w",
+    "dev": "yarn build -- -w",
     "test": "jest src --watch",
     "lint": "eslint src",
     "verify": "CI=true yarn build && yarn test && yarn lint",
     "prerelease": "yarn verify",
-    "release": "yarn unlink && np",
+    "release": "np",
     "prepublish": "yarn build"
   },
   "devDependencies": {
@@ -32,9 +32,7 @@
     "np": "^2.13.1"
   },
   "dependencies": {
-    "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-apollo": "^1.0.1",
     "react-native-web": "^0.0.81"
   },
   "babel": {
