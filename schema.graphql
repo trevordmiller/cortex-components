@@ -1,0 +1,9 @@
+type Query {
+  questions: [question]
+}
+
+type question {
+  id: ID
+  title: String
+  answer: String
+}
