@@ -427,7 +427,7 @@ babel-plugin-jest-hoist@^19.0.0:
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-19.0.0.tgz#4ae2a04ea612a6e73651f3fde52c178991304bea"
 
-babel-plugin-relay@dev:
+babel-plugin-relay@1.0.0-rc.2:
   version "1.0.1-rc.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-1.0.1-rc.2.tgz#e5a6e57ade96929019db36caf3993c7e1ea5c4d2"
   dependencies:
@@ -3272,7 +3272,7 @@ react-native-web@^0.0.81:
     react-textarea-autosize "^4.0.4"
     react-timer-mixin "^0.13.3"
 
-react-relay@dev:
+react-relay@1.0.0-rc.2:
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.0.0-rc.2.tgz#652796949cb58f14b39542b9977882ecccd53aa2"
   dependencies:
@@ -3428,7 +3428,7 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-relay-compiler@dev:
+relay-compiler@1.0.0-rc.2:
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-1.0.0-rc.2.tgz#f9ff5254bfb04c7a2320ad3bd5bd9ee1931028c0"
   dependencies:
