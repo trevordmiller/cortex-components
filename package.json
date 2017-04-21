@@ -17,7 +17,7 @@
     "build:schema": "node scripts/buildSchema.js",
     "build:relay": "relay-compiler --src ./src --schema ./schema.graphql",
     "dev": "yarn build -- -w",
-    "test": "jest src --watch",
+    "test": "jest src",
     "lint": "eslint src",
     "verify": "CI=true yarn build && yarn test && yarn lint",
     "prerelease": "yarn verify",
