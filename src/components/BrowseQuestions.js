@@ -27,9 +27,9 @@ export default () => (
     render={({error, props}) => {
       if (error) {
         return (
-          <div>
+          <Text>
             Error: {error.message}
-          </div>
+          </Text>
         )
       } else if (props) {
         return (
@@ -37,9 +37,9 @@ export default () => (
         )
       }
       return (
-        <div>
+        <Text>
           Loading
-        </div>
+        </Text>
       )
     }}
   />
