@@ -1139,6 +1139,13 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
+create-react-class@^15.5.2:
+  version "15.5.2"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.1"
+
 cross-spawn-async@^2.1.1:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/cross-spawn-async/-/cross-spawn-async-2.2.5.tgz#845ff0c0834a3ded9d160daca6d390906bb288cc"
@@ -1993,7 +2000,7 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-inline-style-prefixer@^3.0.0:
+inline-style-prefixer@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-3.0.2.tgz#989865e0c5de7a946acbea71e16e02741efe0dd7"
   dependencies:
@@ -2970,7 +2977,7 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -3247,29 +3254,21 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@~15.4.1:
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
-  dependencies:
-    fbjs "^0.8.1"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-
-react-native-web@^0.0.81:
-  version "0.0.81"
-  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.0.81.tgz#158de0ba9997a95d9c3f18a0916f1abe84d88ddb"
+react-native-web@^1.0.81:
+  version "0.0.86"
+  resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.0.86.tgz#c70616e184a05211d02d905bb1020c8858de5108"
   dependencies:
     animated "^0.2.0"
     array-find-index "^1.0.2"
     babel-runtime "^6.23.0"
+    create-react-class "^15.5.2"
     debounce "^1.0.0"
     deep-assign "^2.0.0"
     fbjs "^0.8.8"
     hyphenate-style-name "^1.0.2"
-    inline-style-prefixer "^3.0.0"
+    inline-style-prefixer "^3.0.2"
     normalize-css-color "^1.0.2"
-    react-dom "~15.4.1"
-    react-textarea-autosize "^4.0.4"
+    prop-types "^15.5.8"
     react-timer-mixin "^0.13.3"
 
 react-relay@1.0.0-rc.2:
@@ -3285,10 +3284,6 @@ react-relay@1.0.0-rc.2:
 react-static-container@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-static-container/-/react-static-container-1.0.1.tgz#694c0dd68a896b879519afb548399cc1989c9ab0"
-
-react-textarea-autosize@^4.0.4:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-4.0.5.tgz#55379f6a6fa575fc87d1b8de2756e57e3b6c995d"
 
 react-timer-mixin@^0.13.3:
   version "0.13.3"
