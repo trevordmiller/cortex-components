@@ -13,13 +13,14 @@ const BrowseQuestions = ({questions}) => (
   </View>
 )
 
+// I'd like to abstract the duplicate pieces around the relay wrapper
 export default () => (
   <QueryRenderer
     environment={environment}
     query={graphql`
       query BrowseQuestionsQuery {
         questions {
-          id,
+          id
           title
         }
       }
