@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "schema": "node scripts/buildSchema.js",
-    "relay": "relay-compiler --src ./src --schema ./schema.graphql",
+    "relay": "relay-compiler --src src --schema schema.graphql",
     "relay:watch": "yarn relay -- --watch",
     "build": "babel src -d build",
     "build:watch": "yarn build -- --watch",
