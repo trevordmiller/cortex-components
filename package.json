@@ -75,6 +75,7 @@
     "relay-compiler": "1.0.0-rc.2"
   },
   "dependencies": {
+    "ip": "^1.1.5",
     "react": "^15.5.4",
     "react-native-web": "^1.0.81",
     "react-relay": "1.0.0-rc.2"
