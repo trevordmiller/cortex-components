@@ -1,3 +1,5 @@
+// @flow
+
 const fetch = require('node-fetch')
 const fs = require('fs')
 const {buildClientSchema, introspectionQuery, printSchema} = require('graphql/utilities')
