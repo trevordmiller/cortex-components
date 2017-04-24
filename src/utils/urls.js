@@ -1,3 +1,1 @@
-const {address} = require('ip')
-
-exports.apiUrl = `${address()}:5000`
+exports.apiUrl = '192.168.1.104:5000'
