@@ -1,6 +1,6 @@
 {
   "name": "cortex-components",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "The shared components for Cortex clients",
   "repository": "trevordmiller/cortex-components",
   "license": "MIT",
