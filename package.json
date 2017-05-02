@@ -13,18 +13,16 @@
     "build"
   ],
   "scripts": {
-    "schema": "node scripts/buildSchema.js",
-    "relay": "relay-compiler --src src --schema schema.graphql",
-    "relay:watch": "yarn relay -- --watch",
-    "build": "babel src -d build",
-    "build:watch": "yarn build -- --watch",
+    "dev:queries": "yarn queries -- --watch",
+    "dev:build": "yarn build -- --watch",
+    "dev:test": "yarn test -- --watch",
+    "verify": "yarn test && yarn lint && yarn typecheck && yarn queries && yarn build",
     "test": "jest src",
-    "test:watch": "yarn test -- --watch",
     "lint": "eslint src",
     "typecheck": "flow",
-    "verify": "yarn build && yarn test && yarn lint && yarn typecheck",
-    "prerelease": "yarn build",
-    "release": "np"
+    "queries": "node scripts/getApiSchema.js && relay-compiler --src src --schema schema.graphql",
+    "build": "babel src -d build",
+    "release": "git checkout master && git pull && yarn queries && yarn build && yarn version && git push && git push --tags && yarn publish"
   },
   "babel": {
     "presets": [
@@ -77,7 +75,6 @@
     "graphql": "^0.9.3",
     "jest": "^19.0.2",
     "node-fetch": "^1.6.3",
-    "np": "^2.13.1",
     "relay-compiler": "1.0.0-rc.2"
   },
   "dependencies": {
