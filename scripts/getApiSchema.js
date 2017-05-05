@@ -1,5 +1,3 @@
-// @flow
-
 const fetch = require('node-fetch')
 const fs = require('fs')
 const {buildClientSchema, introspectionQuery, printSchema} = require('graphql/utilities')
@@ -18,5 +16,5 @@ fetch(apiUrl, {
   .then(response => response.json())
   .then(response => {
     const schemaString = printSchema(buildClientSchema(response.data))
-    fs.writeFileSync('schema.graphql', schemaString)
+    fs.writeFileSync('src/utils/schema.graphql', schemaString)
   })

@@ -2,37 +2,31 @@
   "name": "cortex-components",
   "version": "0.1.8",
   "description": "The shared components for Cortex clients",
+  "keywords": [
+    "graphql",
+    "relay",
+    "react"
+  ],
   "repository": "trevordmiller/cortex-components",
-  "license": "MIT",
   "author": "Trevor D. Miller (https://trevordmiller.com)",
+  "license": "MIT",
   "main": "build/index.js",
   "files": [
     "package.json",
-    "README.md",
-    "LICENSE.md",
     "build"
   ],
   "scripts": {
-    "dev:queries": "yarn queries -- --watch",
-    "dev:build": "yarn build -- --watch",
-    "dev:test": "yarn test -- --watch",
-    "verify": "yarn test && yarn lint && yarn typecheck && yarn queries && yarn build",
+    "dev": "concurrently -k 'yarn relay -- --watch' 'yarn build -- --watch' -p '{name}' -n 'relay,build' -c 'blue,green'",
+    "test:watch": "yarn test -- --watch",
+    "verify": "yarn test && yarn lint && yarn relay && yarn build",
     "test": "jest src",
     "lint": "eslint src",
-    "typecheck": "flow",
-    "queries": "node scripts/getApiSchema.js && relay-compiler --src src --schema schema.graphql",
-    "build": "babel src -d build",
-    "release": "git checkout master && git pull && yarn queries && yarn build && yarn version && git push && git push --tags && yarn publish"
+    "relay": "node scripts/getApiSchema.js && relay-compiler --src src --schema src/utils/schema.graphql",
+    "build": "babel src -d build -i '**/*.test.js'",
+    "release": "git checkout master && git pull && yarn relay && yarn build && yarn version && git push && git push --tags && npm publish"
   },
-  "babel": {
-    "presets": [
-      "env",
-      "flow",
-      "react"
-    ],
-    "plugins": [
-      "relay"
-    ]
+  "jest": {
+    "testEnvironment": "node"
   },
   "eslintConfig": {
     "extends": [
@@ -42,10 +36,11 @@
     "env": {
       "es6": true,
       "node": true,
+      "jest": true,
       "browser": true
     },
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 2017,
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
@@ -63,15 +58,23 @@
       ]
     }
   },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "relay"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-relay": "1.0.0-rc.2",
     "babel-preset-env": "^1.3.3",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.4.0",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^6.10.3",
-    "flow-bin": "^0.44.2",
     "graphql": "^0.9.3",
     "jest": "^19.0.2",
     "node-fetch": "^1.6.3",
