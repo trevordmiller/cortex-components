@@ -16,14 +16,14 @@
     "build"
   ],
   "scripts": {
-    "dev": "concurrently -k 'yarn relay -- --watch' 'yarn build -- --watch' -p '{name}' -n 'relay,build' -c 'blue,green'",
-    "test:watch": "yarn test -- --watch",
-    "verify": "yarn test && yarn lint && yarn relay && yarn build",
+    "dev": "concurrently -k 'npm run relay -- --watch' 'npm run build -- --watch' -p '{name}' -n 'relay,build' -c 'blue,green'",
+    "test:watch": "npm test -- --watch",
+    "verify": "npm test && npm run lint && npm run relay && npm run build",
     "test": "jest src",
     "lint": "eslint src",
     "relay": "node scripts/getApiSchema.js && relay-compiler --src src --schema src/utils/schema.graphql",
     "build": "babel src -d build -i '**/*.test.js'",
-    "release": "git checkout master && git pull && yarn relay && yarn build && yarn version && git push && git push --tags && npm publish"
+    "release": "git checkout master && git pull && npm run relay && npm run build && npm version && git push && git push --tags && npm publish"
   },
   "jest": {
     "testEnvironment": "node"
@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-plugin-relay": "1.0.0-rc.2",
+    "babel-plugin-relay": "1.0.0",
     "babel-preset-env": "^1.3.3",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.4.0",
@@ -78,11 +78,11 @@
     "graphql": "^0.9.3",
     "jest": "^19.0.2",
     "node-fetch": "^1.6.3",
-    "relay-compiler": "1.0.0-rc.2"
+    "relay-compiler": "1.0.0"
   },
   "dependencies": {
     "react": "^15.5.4",
-    "react-native-web": "^1.0.81",
-    "react-relay": "1.0.0-rc.2"
+    "react-native-web": "0.0.102",
+    "react-relay": "1.0.0"
   }
 }
